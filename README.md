@@ -173,7 +173,7 @@
 
     <header>
         <h1 class="hero-title">HSC Commerce Flash Cards</h1>
-        <p class="subtitle">প্রস্তুতি হোক আরও স্মার্ট</p>
+        <p class="subtitle"></p>
     </header>
 
     <div class="grid-container">
@@ -194,6 +194,7 @@
 
     <div class="warning-footer">
         ⚠️ সতর্কতা: PDF ডাউনলোডের জন্য "Google Chrome" ব্রাউজার ব্যবহার করুন।
+                    (পেজটি এখনো নির্মাণাধীন অবস্থায় আছে)
     </div>
 
     <button class="admin-secret" onclick="activateAdmin()"></button>
@@ -226,3 +227,5 @@
     </script>
 </body>
 </html>
+
+
