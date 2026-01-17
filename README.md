@@ -1,1 +1,228 @@
 # Flashch
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSC Commerce Flash Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-color: #f1f2f6;
+            --btn-gradient: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
+            --warning-bg: #2c3e50;
+            --warning-text: #fab1a0;
+        }
+
+        [data-theme="light"] {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #2d3436;
+            --btn-gradient: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            --warning-bg: #ffeaa7;
+            --warning-text: #d35400;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-color);
+            margin: 0;
+            padding: 30px 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        /* New Font for the Title */
+        .hero-title {
+            font-family: 'Righteous', cursive;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: flow 3s linear infinite;
+        }
+
+        @keyframes flow {
+            0% { background-position: 0%; }
+            100% { background-position: 200%; }
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            background: var(--btn-gradient);
+            color: white;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 16px;
+        }
+
+        /* Smaller & Professional Buttons */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .subject-btn {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 12px 15px; /* Reduced Padding */
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 0.95rem; /* Smaller Font */
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .subject-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: var(--btn-gradient);
+            transition: 0.4s;
+            z-index: -1;
+        }
+
+        .subject-btn:hover {
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        .subject-btn:hover::before {
+            left: 0;
+        }
+
+        .warning-footer {
+            margin-top: 40px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: var(--warning-bg);
+            color: var(--warning-text);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* Admin Secret Area - Bottom Right */
+        .admin-secret {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: none;
+            cursor: default;
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.8rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️</button>
+
+    <header>
+        <h1 class="hero-title">HSC Commerce Flash Cards</h1>
+        <p class="subtitle">প্রস্তুতি হোক আরও স্মার্ট</p>
+    </header>
+
+    <div class="grid-container">
+        <a href="#" class="subject-btn">বাংলা ১ম পত্র</a>
+        <a href="#" class="subject-btn">বাংলা ২য় পত্র</a>
+        <a href="#" class="subject-btn">ইংরেজি ১ম পত্র</a>
+        <a href="#" class="subject-btn">ইংরেজি ২য় পত্র</a>
+        <a href="#" class="subject-btn">আইসিটি</a>
+        <a href="#" class="subject-btn">হিসাববিজ্ঞান ১ম পত্র</a>
+        <a href="#" class="subject-btn">হিসাববিজ্ঞান ২য় পত্র</a>
+        <a href="#" class="subject-btn">ব্যবসায় সংগঠন ও ব্যবস্থাপনা ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/fcman2nd2.0/" class="subject-btn">ব্যবসায় সংগঠন ও ব্যবস্থাপনা ২য় পত্র</a>
+        <a href="#" class="subject-btn">ফিন্যান্স ও ব্যাংকিং ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/fcfin2nd1.0/" class="subject-btn">ফিন্যান্স ও ব্যাংকিং ২য় পত্র</a>
+        <a href="#" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ১ম পত্র</a>
+        <a href="#" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ২য় পত্র</a>
+    </div>
+
+    <div class="warning-footer">
+        ⚠️ সতর্কতা: PDF ডাউনলোডের জন্য "Google Chrome" ব্রাউজার ব্যবহার করুন।
+    </div>
+
+    <button class="admin-secret" onclick="activateAdmin()"></button>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('themeBtn');
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                btn.innerText = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                btn.innerText = '☀️';
+            }
+        }
+
+        function activateAdmin() {
+            const pass = prompt("অ্যাডমিন পাসওয়ার্ড দিন:");
+            if (pass === "admin123") {
+                const links = document.querySelectorAll('.subject-btn');
+                links.forEach(link => {
+                    if(link.getAttribute('href') === "#") {
+                        const url = prompt(link.innerText + " এর জন্য লিঙ্ক দিন:");
+                        if(url) link.setAttribute('href', url);
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
