@@ -173,7 +173,7 @@
 
     <header>
         <h1 class="hero-title">HSC Commerce Flash Cards</h1>
-        <p class="subtitle"></p>
+        <p class="subtitle">Instruction:swipe card for change the question and click on the card for answer</p>
     </header>
 
     <div class="grid-container">
