@@ -177,19 +177,14 @@
     </header>
 
     <div class="grid-container">
-        <a href="#" class="subject-btn">বাংলা ১ম পত্র</a>
-        <a href="#" class="subject-btn">বাংলা ২য় পত্র</a>
-        <a href="#" class="subject-btn">ইংরেজি ১ম পত্র</a>
-        <a href="#" class="subject-btn">ইংরেজি ২য় পত্র</a>
-        <a href="#" class="subject-btn">আইসিটি</a>
-        <a href="#" class="subject-btn">হিসাববিজ্ঞান ১ম পত্র</a>
-        <a href="#" class="subject-btn">হিসাববিজ্ঞান ২য় পত্র</a>
-        <a href="#" class="subject-btn">ব্যবসায় সংগঠন ও ব্যবস্থাপনা ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/acc1stfc/" class="subject-btn">হিসাববিজ্ঞান ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/acc2ndfc/" class="subject-btn">হিসাববিজ্ঞান ২য় পত্র</a>
+        <a href="https://azazhossain.github.io/man1stfc/" class="subject-btn">ব্যবসায় সংগঠন ও ব্যবস্থাপনা ১ম পত্র</a>
         <a href="https://azazhossain.github.io/fcman2nd2.0/" class="subject-btn">ব্যবসায় সংগঠন ও ব্যবস্থাপনা ২য় পত্র</a>
-        <a href="#" class="subject-btn">ফিন্যান্স ও ব্যাংকিং ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/fin1stfc/" class="subject-btn">ফিন্যান্স ও ব্যাংকিং ১ম পত্র</a>
         <a href="https://azazhossain.github.io/fcfin2nd1.0/" class="subject-btn">ফিন্যান্স ও ব্যাংকিং ২য় পত্র</a>
-        <a href="#" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ১ম পত্র</a>
-        <a href="#" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ২য় পত্র</a>
+        <a href="https://azazhossain.github.io/mkt1st/" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ১ম পত্র</a>
+        <a href="https://azazhossain.github.io/mkt2nd/" class="subject-btn">উৎপাদন ব্যবস্থাপনা ও বিপণন ২য় পত্র</a>
     </div>
 
     <div class="warning-footer">
@@ -227,5 +222,3 @@
     </script>
 </body>
 </html>
-
-
